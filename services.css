@@ -285,6 +285,7 @@ footer a {
 
 .card-content h2 {
   color: white;
+  text-align: center;
 }
 
 .card-content p {
@@ -308,7 +309,6 @@ footer a {
 .grid-card img {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
   margin-bottom: 10px;
 }
 
