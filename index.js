@@ -65,5 +65,4 @@ function openlink4() {
 //   content2.style.display = "none";
 //   content3.style.display = "none";
 //   content4.style.display = "none";
-//   // content5.style.display = "inline-block";
 // }

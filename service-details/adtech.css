@@ -299,6 +299,12 @@ footer a {
   font-weight: 400;
 }
 
+.market-content .third-para {
+  color: rgb(132, 132, 8);
+  text-shadow: 1px 1px 2px black;
+  font-weight: 400;
+}
+
 .market-content h1 {
   color: rgb(203, 190, 48);
 
