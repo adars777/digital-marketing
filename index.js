@@ -1,3 +1,9 @@
+// header responsive
+function toggleNavbar() {
+  var navLinks = document.querySelector(".links ul");
+  navLinks.classList.toggle("active");
+}
+
 // ==========================.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.....
 
 let slideIndex = 0;
