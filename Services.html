@@ -12,26 +12,20 @@
         <div class="logo">
           <a href="/">Mediamaverix</a>
         </div>
-
+        <div class="nav-toggle">
+          <button onclick="toggleNavbar()">☰</button>
+        </div>
         <div class="links">
           <ul>
-            <li class="nav-link"><a href="/">HOME</a></li>
-            |
-            <li class="nav-link"><a href="/About.html">ABOUT US</a></li>
-            |
-            <li class="nav-link" id="services">
-              <a href="/Services.html">SERVICES</a>
-            </li>
-            |
-            <li class="nav-link client">
-              <a href="/Clientwork.html">CLIENT AND OUR WORK</a>
-            </li>
-            |
-            <!-- <li class="nav-link"><a href="/">MEET THE TEAM</a></li>
-            | -->
-            <!-- <li class="nav-link"><a href="/">BLOG</a></li>
-            | -->
-            <li class="nav-link contact"><a href="/">CONTACT US</a></li>
+            <li><a href="/">HOME</a></li>
+
+            <li><a href="/About.html">ABOUT US</a></li>
+
+            <li><a href="/Services.html">SERVICES</a></li>
+
+            <li><a href="/Clientwork.html">CLIENT AND OUR WORK</a></li>
+
+            <li><a href="/contact.html">CONTACT US</a></li>
           </ul>
         </div>
       </nav>
@@ -64,7 +58,6 @@
             <h2>Marketing research</h2>
             <p>
               When it comes to advertising and marketing, Market Research is one
-              […]
             </p>
           </div>
           <button
@@ -89,7 +82,7 @@
             <h2>Management consultancy</h2>
             <p>
               We provide strategic guidance, and operational improvement by
-              implementing […]
+              implementing
             </p>
           </div>
           <button
@@ -114,7 +107,7 @@
             <h2>Digital Marketing Services</h2>
             <p>
               We provide a wide range of online strategies and tactics aimed at
-              promoting brands […]
+              promoting brands
             </p>
           </div>
           <button
@@ -135,7 +128,7 @@
             <img src="assets/card-images/social-media.png" alt="Small Image" />
             <h2>Social Media & Influencer Marketing</h2>
             <p>
-              We help brands in creating and sharing content on social media […]
+              We help brands in creating and sharing content on social media
             </p>
           </div>
           <button
@@ -160,7 +153,7 @@
             <h2>Media Planning and Buying</h2>
             <p>
               Our expert media planning and buying team work extensively on
-              behalf […]
+              behalf
             </p>
           </div>
           <button
@@ -182,7 +175,7 @@
             <h2>Performance Marketing</h2>
             <p>
               Performance Marketing We help brands leverage different
-              performance marketing […]
+              performance marketing
             </p>
           </div>
           <button
@@ -205,9 +198,7 @@
               alt="Small Image"
             />
             <h2>Ad Tech and Programmatic Operations</h2>
-            <p>
-              We have a team of experienced professionals with expertise […]
-            </p>
+            <p>We have a team of experienced professionals with expertise</p>
           </div>
           <button
             class="learn-more-button"
@@ -216,31 +207,6 @@
             Learn More
           </button>
         </div>
-
-        <!-- Card 8 -->
-        <!-- <div
-          class="grid-card"
-          onmouseenter="showButton(this)"
-          onmouseleave="hideButton(this)"
-        >
-          <div class="card-content">
-            <img
-              src="https://adaptsmedia.com/wp-content/uploads/2022/03/creative-2.png"
-              alt="Small Image"
-            />
-            <h2>Digital Marketing</h2>
-            <p>
-              Give Your Brand the Much-Needed Digital Edge with Creative Graphic
-              Design […]
-            </p>
-          </div>
-          <button
-            class="learn-more-button"
-            onclick="navigateToPage('another-page.html')"
-          >
-            Learn More
-          </button>
-        </div> -->
 
         <!-- Repeat the above card structure for the remaining cards -->
       </div>
@@ -470,6 +436,11 @@
       function hideButton(card) {
         card.querySelector(".learn-more-button").style.display = "none";
         card.querySelector(".card-content").classList.remove("blurred");
+      }
+
+      function toggleNavbar() {
+        var navLinks = document.querySelector(".links ul");
+        navLinks.classList.toggle("active");
       }
     </script>
   </body>

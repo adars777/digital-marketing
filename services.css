@@ -8,92 +8,109 @@
   background-color: rgb(37, 36, 36);
 }
 
-.header {
-  background-color: rgb(46, 47, 45);
+header {
+  /* background-color: #333; */
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar {
-  z-index: 1000;
-  position: fixed;
-  width: 100%;
-  top: 0%;
-  color: white;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  align-content: center;
-  padding: 12px;
 }
 
 .logo a {
-  font-family: "Archivo", sans-serif;
+  color: #fff;
   text-decoration: none;
-  font-size: 20px;
-  color: white;
+  font-weight: bold;
 }
 
 .links ul {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   list-style: none;
   color: greenyellow;
   gap: 15px;
-  padding-right: 30px;
+  padding-right: 20px;
 }
 
-.links {
-  position: sticky;
-  top: 0%;
-  z-index: 999; /* Ensure that links are above relative positioned elements */
+.links ul li {
+  margin-right: 15px;
 }
 
-#services a {
-  font-weight: 600;
+.links ul li a {
   color: greenyellow;
-  border-bottom: 2px solid greenyellow;
-  padding-bottom: 5px;
-}
-
-.nav-link a {
-  font-size: 15px;
-  font-family: "Archivo", sans-serif;
   text-decoration: none;
-  font-weight: lighter;
-  color: greenyellow;
-  padding: 0px 8px;
 }
 
-.home a {
-  /* border-bottom: 2px solid greenyellow; */
-  color: greenyellow;
-  padding-bottom: 5px;
-  font-weight: 500;
-}
-
-.nav-link a:hover {
+.links ul li:hover {
+  font-weight: 600;
   border-bottom: 2px solid greenyellow;
-  padding-bottom: 5px;
-  color: greenyellow;
-  font-weight: 500;
 }
 
-.hire-btn button {
-  margin: 4px;
-  padding: 10px 12px;
-  font-size: 17px;
-  background-color: rgb(99, 98, 98);
-  color: greenyellow;
+.nav-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle button {
+  background-color: transparent;
   border: none;
-  font-weight: 500;
-  border-radius: 3px;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: none;
+  margin-left: auto; /* Push the button to the right */
 }
 
-.hire-btn button:hover {
-  color: black;
-  font-weight: 500;
-  background-color: greenyellow;
+.nav-toggle button:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .nav-toggle button {
+    display: flex;
+    position: fixed;
+    right: 2%;
+  }
+
+  .links ul {
+    display: none;
+    flex-direction: column;
+    /* padding: 10px; */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+  }
+
+  .links ul li:hover {
+    font-weight: 500;
+    border-bottom: none;
+  }
+
+  .links ul.active {
+    display: flex;
+  }
+
+  .links ul li a {
+    background-color: transparent;
+    font-weight: 500;
+  }
+
+  .links ul li {
+    /* margin: 5px 0; */
+    padding: 5px;
+  }
+
+  .links ul li:hover {
+    background-color: rgb(77, 75, 75);
+  }
 }
 
 footer {
@@ -275,7 +292,7 @@ footer a {
   position: relative;
   width: 300px;
   height: 200px;
-  background-color: #f0f0f0;
+  background-color: transparent;
   border-radius: 10px;
   border: 2px solid greenyellow;
   overflow: hidden;

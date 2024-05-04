@@ -7,38 +7,6 @@
     <link rel="stylesheet" href="digitalmarket.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <a href="/">Mediamaverix</a>
-        </div>
-
-        <div class="links">
-          <ul>
-            <li class="nav-link"><a href="/">HOME</a></li>
-            |
-            <li class="nav-link"><a href="/About.html">ABOUT US</a></li>
-            |
-            <li class="nav-link">
-              <a href="/Services.html">SERVICES</a>
-            </li>
-            |
-            <li class="nav-link" id="client">
-              <a href="/Clientwork.html">CLIENT AND OUR WORK</a>
-            </li>
-            |
-            <!-- <li class="nav-link"><a href="/">MEET THE TEAM</a></li>
-            | -->
-            <!-- <li class="nav-link"><a href="/">BLOG</a></li>
-            | -->
-            <li class="nav-link contact">
-              <a href="/contact.html">CONTACT US</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
     <main>
       <div class="service-heading">
         <h1>Digital Marketing Services</h1>
@@ -354,6 +322,11 @@
       </div>
     </footer>
 
-    <script></script>
+    <script>
+      function toggleNavbar() {
+        var navLinks = document.querySelector(".links ul");
+        navLinks.classList.toggle("active");
+      }
+    </script>
   </body>
 </html>
