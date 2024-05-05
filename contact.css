@@ -53,6 +53,11 @@ header {
   border-bottom: 2px solid greenyellow;
 }
 
+#contact {
+  font-weight: 600;
+  border-bottom: 2px solid greenyellow;
+}
+
 .nav-toggle {
   display: flex;
   align-items: center;
@@ -84,7 +89,7 @@ header {
     flex-direction: column;
     /* padding: 10px; */
     position: absolute;
-    top: 50px;
+    top: 40px;
     left: 0;
     width: 100%;
   }
@@ -109,6 +114,12 @@ header {
   }
 
   .links ul li:hover {
+    background-color: rgb(77, 75, 75);
+  }
+
+  #contact {
+    font-weight: 600;
+    border-bottom: none;
     background-color: rgb(77, 75, 75);
   }
 }
