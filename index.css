@@ -172,7 +172,7 @@ footer a {
 }
 
 .footer-col {
-  width: 23%;
+  /* max-width: 20%; */
   margin: 0 auto;
 }
 
@@ -186,7 +186,9 @@ footer a {
 .social-icons {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  align-content: center;
   gap: 15px;
 }
 
@@ -246,6 +248,59 @@ footer a {
   align-items: center;
 }
 
+/* responsive footer */
+@media screen and (max-width: 1350px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    align-content: center;
+  }
+  .footer-col {
+    width: 45%;
+  }
+  .footer-bottom {
+    font-size: 10px;
+  }
+  .footer-bottom img {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .footer-col {
+    width: 90%;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
+
 /* image slide show  */
 
 .mySlides {
@@ -254,6 +309,7 @@ footer a {
 .mySlides img {
   vertical-align: middle;
   height: 300px;
+  width: 100%;
   object-fit: cover;
   opacity: 0.4;
 }
@@ -320,9 +376,26 @@ footer a {
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {
-    font-size: 11px;
+@media only screen and (max-width: 600px) {
+  .text p {
+    font-size: 18px;
+  }
+}
+
+/* @media only screen and (max-width: 400px) {
+  .text p {
+    font-size: 12px;
+    font-weight: 400;
+  }
+} */
+
+@media only screen and (max-width: 500px) {
+  .mySlides img {
+    height: 200px;
+  }
+  .text p {
+    font-size: 12px;
+    font-weight: 400;
   }
 }
 
@@ -350,7 +423,7 @@ footer a {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: end;
   /* object-position: 1px; */
   padding: 15px 0;
 }
@@ -377,6 +450,10 @@ footer a {
   bottom: 0;
   left: 0;
   transition: width 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz-transition: width 0.3s ease-in-out;
+  -ms-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
 }
 
 .service-links .servic-link p:hover:after {
@@ -402,25 +479,27 @@ footer a {
   color: black;
 }
 
-.image-1 img {
-  height: 400px;
+.image img {
+  height: 500px;
   width: auto;
 }
 
 .content-left {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 100px;
-  margin-left: 50px;
+  /* justify-content: space-between; */
+  gap: 5%;
+  width: 50%;
+  height: 500px;
+  margin-left: 10px;
 }
 .content {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   color: white;
   letter-spacing: 3px;
   text-shadow: 0px 0px 2px white;
-  line-height: 40px;
+  line-height: 30px;
 }
 
 .know-more-btn button {
@@ -438,21 +517,6 @@ footer a {
   background-color: transparent;
   color: greenyellow;
   border: 2px solid greenyellow;
-}
-
-.image-1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  gap: 40px;
-}
-
-.image-1 p {
-  font-size: 60px;
-  font-weight: 500;
-  color: greenyellow;
-  font-family: "Cabin Sketch", sans-serif;
 }
 
 /* all services details */
@@ -503,7 +567,7 @@ footer a {
 .image img {
   height: 400px;
   width: 400px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .content-head {
@@ -515,6 +579,144 @@ footer a {
   font-family: "Cabin Sketch", sans-serif;
   padding-top: 20px;
 }
+
+/* responsive services */
+@media only screen and (max-width: 1150px) {
+  .content {
+    font-size: 13px;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 2px white;
+    line-height: 20px;
+  }
+  .know-more-btn button {
+    font-size: 10px;
+  }
+  .servic-link p {
+    font-size: 10px;
+  }
+
+  .service-links li a button {
+    font-size: 10px;
+    padding: 4px 5px;
+  }
+
+  .image img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+  }
+
+  .content-head {
+    font-size: 40px;
+  }
+  .services {
+    margin-bottom: 10px;
+  }
+
+  .content-left {
+    height: 350px;
+  }
+}
+
+/* for mobile views */
+@media only screen and (max-width: 800px) {
+  .service-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap-reverse;
+  }
+
+  .services-heading {
+    letter-spacing: 7px;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .image {
+    width: 90%;
+    margin: auto;
+  }
+  .image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .content-left {
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+  }
+  .content {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .know-more-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .know-more-btn button {
+    font-size: 13px;
+  }
+  .service {
+    height: fit-content;
+  }
+}
+
+/* for mobile views */
+@media only screen and (max-width: 700px) {
+  .service-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 5px;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .service-links li a button {
+    font-size: 8px;
+    padding: 2px 6px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .service {
+    height: fit-content;
+    padding: 50px 0;
+  }
+
+  .services-heading {
+    letter-spacing: 4px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .content-head {
+    font-size: 20px;
+  }
+
+  .know-more-btn {
+    margin-top: 10px;
+  }
+
+  .service-links ul {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* =----------------------= */
 
 /* our - experience */
 .experience {
@@ -575,4 +777,53 @@ footer a {
   color: greenyellow;
   background-color: transparent;
   /* padding-bottom: 20px; */
+}
+
+@media only screen and (max-width: 960px) {
+  .col h1 {
+    font-size: 40px;
+  }
+  .col p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .col h1 {
+    font-size: 30px;
+  }
+
+  .all-exp-details h2 {
+    font-size: 30px;
+  }
+
+  .col p {
+    font-size: 20px;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .experience-all {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .experience-all hr {
+    width: 70%;
+    margin: auto;
+    height: 2px;
+  }
+
+  .experience h2 {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
 }
