@@ -83,7 +83,7 @@ header {
     flex-direction: column;
     /* padding: 10px; */
     position: absolute;
-    top: 50px;
+    top: 40px;
     left: 0;
     width: 100%;
   }
@@ -395,4 +395,45 @@ footer a {
   color: rgb(179, 170, 11);
   font-weight: 500;
   text-shadow: 1px 1px 2px black;
+}
+/* ------ */
+
+@media screen and (max-width: 1150px) {
+  .market-content p {
+    font-size: 30px;
+  }
+
+  .service-heading h1 {
+    font-size: 25px;
+  }
+
+  .market-content {
+    margin: 5% 5%;
+  }
+
+  .market-content h1 {
+    font-size: 40px;
+  }
+
+  .capital {
+    font-size: 40px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .market-content p {
+    font-size: 20px;
+  }
+  .capital {
+    font-size: 25px;
+    font-weight: 300;
+  }
+  .market-content h1 {
+    font-size: 30px;
+  }
+
+  .heading h2 {
+    font-size: 20px;
+  }
 }

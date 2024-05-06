@@ -714,6 +714,10 @@ footer a {
     display: flex;
     flex-direction: column;
   }
+
+  .know-more-btn button {
+    font-size: 10px;
+  }
 }
 
 /* =----------------------= */

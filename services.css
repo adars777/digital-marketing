@@ -429,3 +429,27 @@ footer a {
 .learn-more-button:hover {
   background-color: rgb(200, 200, 8);
 }
+
+@media screen and (max-width: 1024px) {
+  .learn-more-button {
+    display: inline;
+    top: 85%;
+  }
+
+  .service-heading h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .service-heading h1 {
+    font-size: 25px;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
