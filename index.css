@@ -797,6 +797,10 @@ footer a {
   .col p {
     font-size: 20px;
   }
+
+  .experience .col {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 650px) {
