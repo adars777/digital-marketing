@@ -253,7 +253,7 @@ footer a {
   .footer {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     /* align-items: center; */
     align-content: center;
@@ -269,7 +269,7 @@ footer a {
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .footer {
     display: flex;
     flex-direction: column;
@@ -840,5 +840,45 @@ footer a {
   .experience h2 {
     margin-bottom: 10px;
     font-weight: 500;
+  }
+}
+
+/* brands partners */
+
+.brand-partners h2 {
+  font-size: 45px;
+  color: greenyellow;
+  text-shadow: 0 0 5px black;
+  font-weight: 500;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.brand-partners-head {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  margin: 30px 0;
+}
+
+.brand-partners-head img {
+  height: 100px;
+  width: 100px;
+}
+
+@media only screen and (max-width: 650px) {
+  .brand-partners h2 {
+    font-size: 30px;
+  }
+
+  .brand-partners-head img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .brand-partners-head {
+    gap: 30px;
   }
 }

@@ -253,7 +253,7 @@ footer a {
   .footer {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     /* align-items: center; */
     align-content: center;
@@ -269,7 +269,7 @@ footer a {
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .footer {
     display: flex;
     flex-direction: column;

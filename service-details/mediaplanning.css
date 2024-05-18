@@ -242,7 +242,7 @@ footer a {
   .footer {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     /* align-items: center; */
     align-content: center;
@@ -258,7 +258,7 @@ footer a {
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .footer {
     display: flex;
     flex-direction: column;
@@ -434,4 +434,19 @@ footer a {
   .heading h2 {
     font-size: 20px;
   }
+}
+
+/* service images */
+
+.mid-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid-img img {
+  width: 60%;
+  height: 500px;
+  object-fit: contain;
 }
