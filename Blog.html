@@ -45,7 +45,10 @@
       <!-- blog card -->
 
       <div class="all-blogs">
-        <div class="blog-card">
+        <!-- all blogs  -->
+
+        <!-- blog 1  -->
+        <!-- <div class="blog-card">
           <a href="/blogs/blog1.html">
             <img
               src="assets/blogs/blog-card-1.jpg"
@@ -56,9 +59,10 @@
               Video Marketing Edge: Exploring Its Impact And Benefits
             </p>
           </a>
-        </div>
+        </div> -->
 
-        <div class="blog-card">
+        <!-- blog-2  -->
+        <!-- <div class="blog-card">
           <a href="/blogs/blog1.html">
             <img
               src="assets/blogs/blog-card-1.jpg"
@@ -69,10 +73,10 @@
               Video Marketing Edge: Exploring Its Impact And Benefits
             </p>
           </a>
-        </div>
+        </div> -->
 
         <!-- blog - 3 -->
-        <div class="blog-card">
+        <!-- <div class="blog-card">
           <a href="/blogs/blog1.html">
             <img
               src="assets/blogs/blog-card-1.jpg"
@@ -83,10 +87,10 @@
               Video Marketing Edge: Exploring Its Impact And Benefits
             </p>
           </a>
-        </div>
+        </div> -->
 
         <!-- blog - 4 -->
-        <div class="blog-card">
+        <!-- <div class="blog-card">
           <a href="/blogs/blog1.html">
             <img
               src="assets/blogs/blog-card-1.jpg"
@@ -97,10 +101,10 @@
               Video Marketing Edge: Exploring Its Impact And Benefits
             </p>
           </a>
-        </div>
+        </div> -->
 
         <!-- blog - 5 -->
-        <div class="blog-card">
+        <!-- <div class="blog-card">
           <a href="/blogs/blog1.html">
             <img
               src="assets/blogs/blog-card-1.jpg"
@@ -111,7 +115,7 @@
               Video Marketing Edge: Exploring Its Impact And Benefits
             </p>
           </a>
-        </div>
+        </div> -->
       </div>
     </main>
 
@@ -331,6 +335,61 @@
         var navLinks = document.querySelector(".links ul");
         navLinks.classList.toggle("active");
       }
+
+      // blogs data
+      const blogs = [
+        {
+          link: "/blogs/blog1.html",
+          imgSrc: "assets/blogs/blog-card-1.jpg",
+          imgAlt: "Blog 1",
+          text: "Video Marketing Edge: Exploring Its Impact And Benefits",
+        },
+        {
+          link: "/blogs/blog1.html",
+          imgSrc: "assets/blogs/blog-card-1.jpg",
+          imgAlt: "Blog 2",
+          text: "Video Marketing Edge: Exploring Its Impact And Benefits",
+        },
+        {
+          link: "/blogs/blog1.html",
+          imgSrc: "assets/blogs/blog-card-1.jpg",
+          imgAlt: "Blog 3",
+          text: "Video Marketing Edge: Exploring Its Impact And Benefits",
+        },
+        {
+          link: "/blogs/blog1.html",
+          imgSrc: "assets/blogs/blog-card-1.jpg",
+          imgAlt: "Blog 4",
+          text: "Video Marketing Edge: Exploring Its Impact And Benefits",
+        },
+        {
+          link: "/blogs/blog1.html",
+          imgSrc: "assets/blogs/blog-card-1.jpg",
+          imgAlt: "Blog 5",
+          text: "Video Marketing Edge: Exploring Its Impact And Benefits",
+        },
+      ];
+
+      const blogHTML = blogs
+        .map(
+          (blog) => `
+            <div class="blog-card">
+                <a href="${blog.link}">
+                    <img
+                        src="${blog.imgSrc}"
+                        loading="lazy"
+                        alt="${blog.imgAlt}"
+                    />
+                    <p class="card-text">
+                        ${blog.text}
+                    </p>
+                </a>
+            </div>
+        `
+        )
+        .join("");
+
+      document.querySelector(".all-blogs").innerHTML = blogHTML;
     </script>
   </body>
 </html>
