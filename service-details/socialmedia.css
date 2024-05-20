@@ -336,6 +336,73 @@ footer a {
 
 /* content */
 
+.content-upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1px;
+  margin: 5% 5%;
+}
+
+.right-content p {
+  color: rgb(179, 170, 11);
+  font-size: 26px;
+}
+
+.left-content img {
+  width: 600px;
+  height: 400px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1350px) {
+  .right-content p {
+    font-size: 22px;
+  }
+
+  .left-content img {
+    width: 550px;
+    height: 400px;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .right-content p {
+    font-size: 20px;
+  }
+
+  .left-content img {
+    width: 500px;
+    height: 400px;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .left-content img {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 20px auto;
+    height: 400px;
+    object-fit: contain;
+  }
+
+  .content-upper {
+    flex-wrap: wrap-reverse;
+  }
+  .right-content p {
+    font-size: 20px;
+  }
+
+  .right-content {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .market-content {
   color: rgb(179, 170, 11);
   margin: 5% 10%;

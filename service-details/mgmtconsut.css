@@ -334,6 +334,71 @@ footer a {
   background-color: transparent;
 }
 
+.content-upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  gap: 50px;
+  margin: 5% 5%;
+}
+
+.right-content p {
+  color: rgb(179, 170, 11);
+  font-size: 36px;
+}
+
+.left-content img {
+  width: 600px;
+  height: auto;
+}
+
+@media screen and (max-width: 1350px) {
+  .right-content p {
+    font-size: 30px;
+  }
+
+  .left-content img {
+    width: 550px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .right-content p {
+    font-size: 28px;
+  }
+
+  .left-content img {
+    width: 500px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .left-content img {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .content-upper {
+    flex-wrap: wrap-reverse;
+  }
+  .right-content p {
+    font-size: 20px;
+  }
+
+  .right-content {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .market-content {
   color: white;
   margin: 5% 10%;

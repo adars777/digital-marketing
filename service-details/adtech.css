@@ -338,7 +338,7 @@ footer a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
 }
 
 .market-content p {
@@ -352,22 +352,98 @@ footer a {
   font-weight: 400;
 }
 
-.market-content .first-para {
+.content-upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 5% 5%;
+  /* flex-wrap: wrap; */
+}
+.left-content {
+  width: 50%;
+}
+
+.right-content {
+  width: 50%;
+  /* overflow: hidden; */
+}
+
+.right-content p {
   color: rgb(179, 170, 11);
-  font-weight: 400;
+  font-size: 25px;
+}
+
+.left-content img {
+  width: 90%;
+  height: auto;
+}
+
+@media screen and (max-width: 1350px) {
+  .right-content p {
+    font-size: 22px;
+  }
+  .market-content p {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .right-content p {
+    font-size: 19px;
+  }
+
+  .market-content p {
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .content-upper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    /* justify-content: space-around; */
+  }
+
+  .left-content {
+    width: fit-content;
+  }
+
+  .right-content {
+    width: fit-content;
+    /* overflow: hidden; */
+  }
+
+  .left-content img {
+    width: 90%;
+    object-fit: contain;
+    /* height: auto; */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .right-content p {
+    font-size: 18px;
+  }
+  .market-content p {
+    font-size: 18px;
+  }
+}
+
+/* .market-content .first-para {
+  color: rgb(179, 170, 11);
   text-shadow: 1px 1px 2px black;
 }
 
 .market-content .second-para {
   color: rgb(179, 170, 11);
   text-shadow: 1px 1px 2px black;
-  font-weight: 400;
-}
+} */
 
 .market-content .third-para {
   color: rgb(179, 170, 11);
   text-shadow: 1px 1px 2px black;
-  font-weight: 400;
 }
 
 .market-content h1 {
@@ -399,10 +475,6 @@ footer a {
 }
 
 @media screen and (max-width: 1150px) {
-  .market-content p {
-    font-size: 30px;
-  }
-
   .service-heading h1 {
     font-size: 28px;
   }
@@ -417,15 +489,12 @@ footer a {
   }
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .market-content p {
     font-size: 25px;
   }
-  .capital {
-    font-size: 30px;
-    font-weight: 300;
-  }
-}
+  
+} */
 
 /* service images */
 
